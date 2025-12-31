@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্মিতার জন্য | শুভ নববর্ষ ২০২৬</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a4a 50%, #2d2d7a 100%);
+            color: #fff;
+            min-height: 100vh;
+            font-family: 'Hind Siliguri', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .gold-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #FFD700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #FFD700, transparent);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0ff;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 60px 0;
+            align-items: center;
+        }
+        
+        .hero-section {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .year-2026 {
+            font-size: 8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6347);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: glow 3s infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+            100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8)); }
+        }
+        
+        .friend-name {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .friend-name span {
+            color: #FFD700;
+            position: relative;
+        }
+        
+        .friend-name span::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FF6347);
+        }
+        
+        .message-section {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #FFD700, #FF6347);
+        }
+        
+        .message-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .message-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            color: #FFD700;
+            font-weight: 600;
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #a0a0ff;
+            margin-top: 20px;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .signature::before {
+            content: "—";
+            position: absolute;
+            right: 10px;
+        }
+        
+        .gift-box {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #1a1a4a;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .gift-box:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        .gift-box-1 {
+            top: 15%;
+            left: 10%;
+        }
+        
+        .gift-box-2 {
+            bottom: 20%;
+            right: 10%;
+        }
+        
+        .gift-box-3 {
+            top: 40%;
+            right: 15%;
+        }
+        
+        .interactive-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .wish-card {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wish-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .wish-card:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .wish-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+        }
+        
+        .wish-card i {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        
+        .wish-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .wish-card p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        
+        .countdown {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #FF6347, #FFD700, #1a1a4a);
+        }
+        
+        .countdown-title {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 30px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 100px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #FFD700;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            color: #a0a0ff;
+            margin-top: 10px;
+        }
+        
+        .personal-message {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 99, 71, 0.1));
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .personal-message h2 {
+            font-size: 2.2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .personal-message p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .secret-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #1a1a4a;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+        
+        .secret-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        .secret-message {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid #FFD700;
+        }
+        
+        .secret-message.show {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart {
+            position: absolute;
+            color: #FF6347;
+            opacity: 0;
+            font-size: 24px;
+            animation: float 8s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { 
+                transform: translateY(100vh) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { 
+                transform: translateY(-100px) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #a0a0ff;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .year-2026 { font-size: 5rem; }
+            .friend-name { font-size: 2.5rem; }
+            .message-title { font-size: 1.8rem; }
+            .message-text { font-size: 1.1rem; }
+            .gift-box { width: 50px; height: 50px; font-size: 1.2rem; }
+            .countdown-number { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="gold-overlay"></div>
+    
+    <div class="floating-hearts" id="hearts-container"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">Happy New Year 🥳</div>
+            <div class="subtitle">একটি নতুন শুরু, নতুন আশা, নতুন স্বপ্ন</div>
+        </header>
+        
+        <div class="main-content">
+            <div class="hero-section">
+                <div class="year-2026">২০২৬</div>
+                <div class="friend-name">বন্ধু  <span>স্মিতা</span>, তোমার জন্য</div>
+                
+                <div class="gift-box gift-box-1" id="gift1">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="gift-box gift-box-2" id="gift2">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="gift-box gift-box-3" id="gift3">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <h2 class="message-title">বিশেষ শুভেচ্ছা বার্তা</h2>
+                <div class="message-text">
+                    <p>প্রিয় <span class="highlight">স্মিতা</span>,</p>
+                    <p>নতুন বছর <span class="highlight">২০২৬</span> তোমার জীবনে নিয়ে আসুক <span class="highlight">অফুরন্ত সুখ, অসীম সাফল্য এবং অপার ভালোবাসা</span>। পুরনো বছরের সমস্ত দুঃখ, ব্যর্থতা পেছনে ফেলে নতুন উদ্যমে এগিয়ে যাওয়ার এটাই শ্রেষ্ঠ সময়।</p>
+                    <p>তোমার প্রতিটি স্বপ্ন পূরণ হোক, প্রতিটি প্রচেষ্টা সফল হোক। নতুন বছরের প্রতিটি দিন যেন হয়ে ওঠে <span class="highlight">রঙিন এবং আনন্দময়</span>। জীবনের প্রতিটি ক্ষেত্রে তুমি সফলতা অর্জন করো, এই কামনা রইল।</p>
+                    <p>শুভ নববর্ষ ২০২৬!</p>
+                </div>
+                <div class="signature">তোমার অগণিত শুভাকাঙ্ক্ষী </div>
+            </div>
+        </div>
+        
+        <div class="interactive-section">
+            <div class="wish-card" id="wish1">
+                <i class="fas fa-laugh-beam"></i>
+                <h3>অসীম সুখ</h3>
+                <p>নতুন বছরে তোমার জীবন হোক সুখে পরিপূর্ণ, প্রতিটি মুহূর্ত হোক আনন্দময়</p>
+            </div>
+            <div class="wish-card" id="wish2">
+                <i class="fas fa-trophy"></i>
+                <h3>সাফল্য</h3>
+                <p>জীবনের প্রতিটি ক্ষেত্রে তুমি সফলতা অর্জন করো, সমস্ত লক্ষ্য পূরণ হোক</p>
+            </div>
+            <div class="wish-card" id="wish3">
+                <i class="fas fa-heartbeat"></i>
+                <h3>সুস্বাস্থ্য</h3>
+                <p>শারীরিক ও মানসিকভাবে তুমি সব সময় সুস্থ ও প্রাণবন্ত থাকো</p>
+            </div>
+        </div>
+        
+        <div class="countdown">
+            <h2 class="countdown-title">২০২৬ সালের প্রতীক্ষা</h2>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">365</div>
+                    <div class="countdown-label">দিন</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">23</div>
+                    <div class="countdown-label">ঘণ্টা</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">59</div>
+                    <div class="countdown-label">মিনিট</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">59</div>
+                    <div class="countdown-label">সেকেন্ড</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="personal-message">
+            <h2><i class="fas fa-crown"></i>তোমার জন্য বিশেষ বার্তা </h2>
+            <p>তুমি শুধু একজন বন্ধু নও, তুমি জীবনের একটি সুন্দর অধ্যায়। নতুন বছরে আমাদের বন্ধুত্ব আরও দৃঢ় হোক, আরও সুন্দর হোক।</p>
+            
+            <button class="secret-btn" id="secretBtn">
+                <i class="fas fa-lock-open"></i> গোপন বার্তা দেখো
+            </button>
+            
+            <div class="secret-message" id="secretMessage">
+                <h3><i class="fas fa-gem"></i></h3>
+                <p>"স্মিতা, তুমি জানো কি? আমাদের বন্ধুত্ব আমার জীবনের সবচেয়ে মূল্যবান সম্পদ। নতুন বছরে এই বন্ধুত্ব যেন আরও গভীর হয়, আরও অর্থবহ হয়। সব সময় আমার পাশে থাকার জন্য অসংখ্য ধন্যবাদ। ২০২৬ সাল আমাদের জন্য নিয়ে আসুক আরও সুন্দর স্মৃতি।"</p>
+                <p style="margin-top: 15px; font-style: italic; color: #FFD700;">- তোমার বন্ধু আদিত্য</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© ২০২৫ | তৈরি হয়েছে বিশেষভাবে শুধু তোমার জন্য</p>
+        <p style="margin-top: 10px;">এই শুভেচ্ছাও শুধুমাত্র তোমার জন্য | Happy New Year 2026!</p>
+    </footer>
+
+    <script>
+        // ফ্লোটিং হার্ট তৈরি
+        const heartsContainer = document.getElementById('hearts-container');
+        for (let i = 0; i < 25; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.left = `${Math.random() * 100}%`;
+            heart.style.animationDelay = `${Math.random() * 5}s`;
+            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+            heart.style.color = getRandomColor();
+            heartsContainer.appendChild(heart);
+        }
+        
+        function getRandomColor() {
+            const colors = ['#FFD700', '#FFA500', '#FF6347', '#FF69B4', '#9370DB'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        // কাউন্টডাউন টাইমার
+        function updateCountdown() {
+            // ২০২৬ সালের ১লা জানুয়ারি
+            const newYear2026 = new Date('January 1, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = newYear2026 - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            } else {
+                document.getElementById('days').textContent = '০';
+                document.getElementById('hours').textContent = '০';
+                document.getElementById('minutes').textContent = '০';
+                document.getElementById('seconds').textContent = '০';
+            }
+        }
+        
+        // প্রতি সেকেন্ডে কাউন্টডাউন আপডেট
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // প্রথমবার চালানো
+        
+        // গিফট বক্স ইভেন্ট
+        const giftBoxes = document.querySelectorAll('.gift-box');
+        giftBoxes.forEach((box, index) => {
+            box.addEventListener('click', function() {
+                const messages = [
+                    "নতুন বছরে তোমার সবচেয়ে বড় স্বপ্ন পূরণ হোক!",
+                    "২০২৬ সাল তোমার জন্য নিয়ে আসুক অসাধারণ সুযোগ!",
+                    "তোমার জীবন হোক রঙিন ও আনন্দময়!"
+                ];
+                
+                // এনিমেশন
+                this.style.transform = 'scale(1.3) rotate(20deg)';
+                this.style.boxShadow = '0 0 30px rgba(255, 215, 0, 0.8)';
+                
+                // বার্তা দেখানো
+                alert(messages[index]);
+                
+                // মূল অবস্থায় ফিরে আসা
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                }, 500);
+            });
+        });
+        
+        // উইশ কার্ড ইভেন্ট
+        const wishCards = document.querySelectorAll('.wish-card');
+        wishCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // রঙ পরিবর্তন
+                const colors = ['rgba(255, 215, 0, 0.2)', 'rgba(255, 99, 71, 0.2)', 'rgba(147, 112, 219, 0.2)'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                this.style.background = randomColor;
+                
+                // কিছুক্ষণ পর মূল অবস্থায় ফিরে আসা
+                setTimeout(() => {
+                    this.style.background = '';
+                }, 1000);
+            });
+        });
+        
+        // সিক্রেট বাটন
+        document.getElementById('secretBtn').addEventListener('click', function() {
+            const secretMessage = document.getElementById('secretMessage');
+            secretMessage.classList.toggle('show');
+            
+            if (secretMessage.classList.contains('show')) {
+                this.innerHTML = '<i class="fas fa-lock"></i> গোপন বার্তা লুকাও';
+                this.style.background = 'linear-gradient(45deg, #FF6347, #FFD700)';
+                
+                // বিশেষ এফেক্ট
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                        createHeartAtPosition(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+                    }, i * 100);
+                }
+            } else {
+                this.innerHTML = '<i class="fas fa-lock-open"></i> গোপন বার্তা দেখো';
+                this.style.background = 'linear-gradient(45deg, #FFD700, #FFA500)';
+            }
+        });
+        
+        // হার্ট তৈরি ফাংশন
+        function createHeartAtPosition(x, y) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            heart.style.position = 'fixed';
+            heart.style.fontSize = `${Math.random() * 20 + 15}px`;
+            heart.style.color = getRandomColor();
+            heart.style.zIndex = '1000';
+            heart.style.animation = 'float 4s linear forwards';
+            
+            document.body.appendChild(heart);
+            
+            // অ্যানিমেশন শেষ হলে মুছে ফেলা
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+        
+        // ব্যাকগ্রাউনে শুভেচ্ছা শব্দ ভাসানো
+        function createFloatingText() {
+            const texts = ['শুভ নববর্ষ', 'Happy 2026', 'স্মিতা', 'বন্ধুত্ব', 'সুখ', 'সাফল্য'];
+            const text = texts[Math.floor(Math.random() * texts.length)];
+            
+            const floatingText = document.createElement('div');
+            floatingText.textContent = text;
+            floatingText.style.position = 'fixed';
+            floatingText.style.left = `${Math.random() * 100}%`;
+            floatingText.style.top = '100vh';
+            floatingText.style.color = 'rgba(255, 255, 255, 0.1)';
+            floatingText.style.fontSize = `${Math.random() * 30 + 20}px`;
+            floatingText.style.fontWeight = 'bold';
+            floatingText.style.fontFamily = "'Playfair Display', serif";
+            floatingText.style.zIndex = '0';
+            floatingText.style.pointerEvents = 'none';
+            floatingText.style.animation = `floatUp ${Math.random() * 10 + 15}s linear forwards`;
+            
+            document.body.appendChild(floatingText);
+            
+            // অ্যানিমেশন শেষ হলে মুছে ফেলা
+            setTimeout(() => {
+                floatingText.remove();
+            }, 15000);
+        }
+        
+        // প্রতি ৩ সেকেন্ডে ফ্লোটিং টেক্সট তৈরি
+        setInterval(createFloatingText, 3000);
+        
+        // ফ্লোট আপ অ্যানিমেশন CSS যোগ
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+                10% { opacity: 0.15; }
+                90% { opacity: 0.15; }
+                100% { transform: translateY(-100vh) rotate(10deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
